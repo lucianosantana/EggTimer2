@@ -69,9 +69,9 @@ rm -f "$EGGWD"/last_completed_timer/*
 mv "$EGGWD/running_autotimers/timer-$filestring.tim" "$EGGWD/last_completed_timer"
 
 #Alert the user
-notify "Timer Completed" "EggTimer" "✓  $item" "$mins $displaymins is up. (auto-repeating)" "timer"
-#growlnotify "$mins $displaymins is up."$'\n'$'\n'"✓  $item"$'\n'$'\n'"This timer is set to repeat automatically."$'\n'"To cancel, enter:"$'\n'$'\n'"▏ timer stop"  -s
 afplay sounds/alarm_done.mp3 &
+notify "Timer Completed" "EggTimer" "✓  $item" "$mins $displaymins is up. (auto-repeating)" "timer"
+
 
 #Repeat the timer
 

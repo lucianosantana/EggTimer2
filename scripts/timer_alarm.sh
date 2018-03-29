@@ -77,13 +77,12 @@ fi
 
 #Alert the user
 if [ -z $repeat ]; then
-	notify "Alarm Completed" "EggTimer Alarm" "✓  $item" "It's $duetime" "alarm"
-	#growlnotify "It's $duetime"$'\n'$'\n'"✓  $item"$'\n' -s
-	afplay sounds/alarm_done.mp3 &
+    afplay sounds/alarm_done.mp3 &
+    notify "Alarm Completed" "EggTimer Alarm" "✓  $item" "It's $duetime" "alarm"
+
 else
-	notify "Alarm Completed" "EggTimer Alarm" "✓  $item" "It's $duetime (repeats $repeat)" "alarm"
-	#growlnotify "It's $duetime"$'\n'$'\n'"✓  $item"$'\n'"(Alarm repeats $repeat)" -s
 	afplay sounds/alarm_done.mp3 &
+    notify "Alarm Completed" "EggTimer Alarm" "✓  $item" "It's $duetime (repeats $repeat)" "alarm"
 	#Restart the alarm:
 	if [ $repeat = hourly ]; then
 		epochdue=$((epochdue+3600))

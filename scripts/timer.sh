@@ -70,5 +70,6 @@ cp "$EGGWD/running_timers/timer-$filestring.tim" "$EGGWD/recent_timers"
 mv "$EGGWD/running_timers/timer-$filestring.tim" "$EGGWD/last_completed_timer"
 
 #Alert the user
-notify "Timer Completed" "EggTimer" "✓  $item" "$mins $displaymins is up." "timer"
 afplay sounds/alarm_done.mp3 &
+notify "Timer Completed" "EggTimer" "✓  $item" "$mins $displaymins is up." "timer"
+
