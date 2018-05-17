@@ -1,5 +1,5 @@
 # -----------------------------------------
-# EggTimer 2 for Alfred 2
+# EggTimer 2 for Alfred 3
 # by Carl Smith (@CarlosNZ)
 # -----------------------------------------
 
@@ -8,12 +8,12 @@ source ./scripts/includes.sh
 
 #"Create New Timer" option selected
 if [ $1 = newtimer ]; then
-	osascript -e 'tell application "Alfred 2" to search "timer "'
+	osascript -e 'tell application "Alfred 3" to search "timer "'
 	exit
 fi
 #"Create New Alarm" option selected
 if [ $1 = newalarm ]; then
-	osascript -e 'tell application "Alfred 2" to search "alarm "'
+	osascript -e 'tell application "Alfred 3" to search "alarm "'
 	exit
 fi
 #"View Recent" option selected
@@ -24,7 +24,7 @@ if [ $1 = recent ]; then
 	keyword=$(echo "$prefs" | grep -o  '<key>config</key><dict><key>argumenttype</key><integer>2</integer><key>escaping</key><integer>0</integer><key>keyword</key><string>.*</string><key>script</key><string>./scripts/input_recent.sh</string>')					
 keyword=${keyword/<key>config<\/key><dict><key>argumenttype<\/key><integer>2<\/integer><key>escaping<\/key><integer>0<\/integer><key>keyword<\/key><string>}
 keyword=${keyword/<\/string><key>script<\/key><string>.\/scripts\/input_recent.sh<\/string>}
-	osascript -e "tell application \"Alfred 2\" to search \"$keyword\""
+	osascript -e "tell application \"Alfred 3\" to search \"$keyword\""
 	exit
 fi
 

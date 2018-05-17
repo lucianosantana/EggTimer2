@@ -1,5 +1,5 @@
 # -----------------------------------------
-# EggTimer 2 for Alfred 2
+# EggTimer 2 for Alfred 3
 # by Carl Smith (@CarlosNZ)
 # -----------------------------------------
 
